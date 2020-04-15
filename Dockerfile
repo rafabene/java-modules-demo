@@ -1,11 +1,11 @@
-FROM openjdk:11-oraclelinux7 as builder
+FROM adoptopenjdk:openj9 as builder
 
 WORKDIR /app
 
 COPY first/target/first-1.0-SNAPSHOT.jar .
 COPY second/target/second-1.0-SNAPSHOT.jar .
 
-RUN jlink --strip-debug \
+RUN jlink --strip-java-debug-attributes \
             --compress 2 \
             --no-header-files \
             --no-man-pages \
