@@ -1,6 +1,5 @@
 package com.rafabene.second;
 
-import java.util.Scanner;
 
 /**
  * Hello world!
